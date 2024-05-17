@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage('Test') {
+      steps {
+        sh 'python3 testformsubmission.py'
+        sh 'python3 navigation.py'
+      }
+    }
+}
+}
